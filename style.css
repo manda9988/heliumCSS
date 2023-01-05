@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+::before,
+::after {
+  padding: 5px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* border: 1px solid red; */
+}
+
+*::selection {
+  background: whitesmoke;
+  color: #161616;
+}
+
+body {
+  color: whitesmoke;
+  background: rgb(36, 36, 36);
+  height: 96vh;
+}
+
+/********************* NAV ********************/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav h2 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  transform: scale(1.2, 0.6);
+}
+
+nav ul {
+  display: flex;
+  width: 52%;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+li:hover {
+  transform: scale(1.2);
+  /* filter: brightness(175%); */
+  color: rgb(255, 255, 255);
+}
+
+/********************* HEADER ********************/
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.header-left-container h3 {
+  color: rgb(59, 59, 255);
+  font-size: 1.1rem;
+}
+
+.header-left-container p {
+  font-size: 0.8rem;
+}
+
+.header-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modem {
+  width: 100%;
+}
+
+/********************* INFOS ********************/
+
+.infos {
+  display: flex;
+  background: rgb(16, 16, 16);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.infos h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.infos-left {
+  width: 40%;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background: rgb(59, 59, 255);
+  color: whitesmoke;
+  width: 160px;
+  padding: 8px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 3px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  color: rgb(59, 59, 255);
+  background: whitesmoke;
+  transform: scale(0.9);
+}
+
+.infos-right {
+  width: 60%;
+}
+
+.investors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.img-container img {
+  width: 24%;
+}
+
+/********************* RESPONSIVE ********************/
+
+@media screen and (max-width: 455px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav h2 {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /************** HEADER **********/
+
+  header {
+    margin: 10px auto;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .header-left-container h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .header-left-container p {
+    font-size: 0.8rem;
+    text-align: justify;
+    width: 84%;
+    margin: 0 auto;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  /************** INFOS **********/
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    width: 75%;
+  }
+
+  .infos-left {
+    width: 100%;
+  }
+
+  .infos h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px;
+    margin: 3px;
+    font-size: 0.8rem;
+  }
+
+  .infos-right {
+    width: 100%;
+  }
+
+  .investors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .img-container img {
+    width: 34%;
+
+    margin: 4px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav h2 {
+    font-size: 3rem;
+  }
+
+  nav ul {
+    width: 30%;
+  }
+
+  li {
+    font-size: 0.8rem;
+  }
+
+  /* HEADER */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+  }
+
+  .header-left {
+    width: 34%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .header-left-container p {
+    font-size: 0.8rem;
+  }
+
+  .header-right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #modem {
+    width: 50%;
+  }
+
+  /* INFOS */
+
+  .img-container {
+    width: 80%;
+  }
+
+  .img-container img {
+    width: 100px;
+  }
+}
